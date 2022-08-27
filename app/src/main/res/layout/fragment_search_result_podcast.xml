@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchResultPodcastVM" type="com.musica.app.modules.searchresultpodcast.data.viewmodel.SearchResultPodcastVM"/>
+    </data>
+    <androidx.core.widget.NestedScrollView android:clipToPadding="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollViewScrollview"
+        android:layout_height="match_parent" android:layout_width="match_parent">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnpodcastsshow"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="vertical">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowpodcastsshow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPodcastsShow"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{searchResultPodcastVM.searchResultPodcastModel.txtPodcastsShow}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/msg_podcasts_show"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSeeAll"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{searchResultPodcastVM.searchResultPodcastModel.txtSeeAll}"
+                    style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_see_all"/>
+            </LinearLayout>
+            <HorizontalScrollView android:fillViewport="true"
+                android:id="@+id/horizontalScrollHorizontalscrollcountry"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:scrollbars="none">
+                <LinearLayout android:id="@+id/linearRowcountry"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumncountry"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageImage"
+                            android:layout_height="@dimen/_160pxh"
+                            android:layout_width="@dimen/_160pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_24pxh}"
+                            imageRes="@{@drawable/img_image_160X160}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_image_160X160"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtCountry"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{searchResultPodcastVM.searchResultPodcastModel.txtCountry}"
+                            style="@style/txtUrbanistromanbold18" tools:text="@string/msg_the_jordan_harb"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnappletalk"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageImageOne"
+                            android:layout_height="@dimen/_160pxh"
+                            android:layout_width="@dimen/_160pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_24pxh}"
+                            imageRes="@{@drawable/img_image_24}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_image_24"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtAppleTalk"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{searchResultPodcastVM.searchResultPodcastModel.txtAppleTalk}"
+                            style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_apple_talk"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumndrdeath"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageImageTwo"
+                            android:layout_height="@dimen/_160pxh"
+                            android:layout_width="@dimen/_160pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_24pxh}"
+                            imageRes="@{@drawable/img_image_39}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_image_39"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtDrDeath"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{searchResultPodcastVM.searchResultPodcastModel.txtDrDeath}"
+                            style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_dr_death"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutHor"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEpisodes"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{searchResultPodcastVM.searchResultPodcastModel.txtEpisodes}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_episodes"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSeeAllOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{searchResultPodcastVM.searchResultPodcastModel.txtSeeAllOne}"
+                    style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_see_all"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerListpodcasttitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="false"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_25pxh}" tools:itemCount="3" tools:listitem="@layout/row_listpodcasttitle2"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

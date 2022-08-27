@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="chartsVM" type="com.musica.app.modules.charts.data.viewmodel.ChartsVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearNavBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/linearRowarrowleft"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_height="@dimen/_15pxh"
+                        android:layout_width="@dimen/_19pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCharts"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{chartsVM.chartsModel.txtCharts}"
+                        style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_charts"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageSearch"
+                    android:layout_height="@dimen/_22pxh"
+                    android:layout_width="@dimen/_21pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_search"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_search"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearCharts"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWeeklyAlbumCh"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{chartsVM.chartsModel.txtWeeklyAlbumCh}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/msg_weekly_album_ch"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerListprice"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_12pxh}" tools:itemCount="2" tools:listitem="@layout/row_listprice1"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWeeklySongCha"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{chartsVM.chartsModel.txtWeeklySongCha}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/msg_weekly_song_cha"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerListpriceTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_12pxh}" tools:itemCount="2" tools:listitem="@layout/row_listprice_two"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDailyViralCha"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{chartsVM.chartsModel.txtDailyViralCha}"
+                style="@style/txtUrbanistromanbold24" tools:text="@string/msg_daily_viral_cha"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerListpriceFour"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_12pxh}" tools:itemCount="2" tools:listitem="@layout/row_listprice_four"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="addNewCardVM" type="com.musica.app.modules.addnewcard.data.viewmodel.AddNewCardVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearAddNewCard"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearRowgroup"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/linearRowarrowleft"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_height="@dimen/_15pxh"
+                        android:layout_width="@dimen/_19pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtAddNewCard"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{addNewCardVM.addNewCardModel.txtAddNewCard}"
+                        style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_add_new_card"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageGroup"
+                    android:layout_height="@dimen/_20pxh"
+                    android:layout_width="@dimen/_24pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_group"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_group"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <FrameLayout android:id="@+id/frameStackgroupOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_239pxv"
+            android:layout_width="@dimen/_380pxh" style="@style/groupStylecornerRadius_1">
+            <ImageView android:id="@+id/imageGroupOne"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_239pxh"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_32pxh}"
+                imageRes="@{@drawable/img_group_239X380}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_group_239X380"/>
+            <LinearLayout android:id="@+id/linearRowmocard"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearAutoLayoutVer"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtMocard"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{addNewCardVM.addNewCardModel.txtMocard}"
+                        style="@style/txtUrbanistromanbold16_1" tools:text="@string/lbl_mocard"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtEight"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:text="@{addNewCardVM.addNewCardModel.txtEight}"
+                        style="@style/txtUrbanistromanbold48" tools:text="@string/msg"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearAutoLayoutHor"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearAutoLayoutVer1"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtCardHoldernam"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@{addNewCardVM.addNewCardModel.txtCardHoldernam}"
+                                style="@style/txtUrbanistromanmedium10" tools:text="@string/msg_card_holder_nam"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtNine"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@{addNewCardVM.addNewCardModel.txtNine}"
+                                style="@style/txtUrbanistsemibold14_1" tools:text="@string/lbl2"/>
+                        </LinearLayout>
+                        <LinearLayout android:gravity="start"
+                            android:id="@+id/linearAutoLayoutVer2"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content" android:orientation="vertical">
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtExpirydate"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@{addNewCardVM.addNewCardModel.txtExpirydate}"
+                                style="@style/txtUrbanistromanmedium10" tools:text="@string/lbl_expiry_date"/>
+                            <TextView android:ellipsize="end"
+                                android:id="@+id/txtTen"
+                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:letterSpacing="0.01"
+                                android:singleLine="true"
+                                android:text="@{addNewCardVM.addNewCardModel.txtTen}"
+                                style="@style/txtUrbanistsemibold14_1" tools:text="@string/lbl3"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageAutoLayoutVer"
+                    android:layout_height="@dimen/_179pxh"
+                    android:layout_width="@dimen/_60pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_autolayoutver"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_autolayoutver"/>
+            </LinearLayout>
+        </FrameLayout>
+        <View android:background="@color/bluegray_100"
+            android:id="@+id/lineLine"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_380pxh"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumncardname"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCardName"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{addNewCardVM.addNewCardModel.txtCardName}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_card_name"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_gray_50_radius_16"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:hint="@string/lbl_andrew_ainsley"
+                android:id="@+id/etStatusFillTy"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_22pxv"
+                android:singleLine="true"
+                android:text="@={addNewCardVM.addNewCardModel.etStatusFillTyValue}"
+                android:textColor="@color/gray_900"
+                android:textColorHint="@color/gray_900"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCardNumber"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{addNewCardVM.addNewCardModel.txtCardNumber}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_card_number"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_gray_50_radius_16"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:hint="@string/msg_2672_4738_7837"
+                android:id="@+id/etStatusFillTyOne"
+                android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_20pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_20pxh"
+                android:paddingTop="@dimen/_21pxv"
+                android:singleLine="true"
+                android:text="@={addNewCardVM.addNewCardModel.etStatusFillTyOneValue}"
+                android:textColor="@color/gray_900"
+                android:textColorHint="@color/gray_900"
+                android:textFontWeight="600"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="bold" tools:ignore="Autofill"/>
+            <LinearLayout android:id="@+id/linearRowexpirydateOne"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearAutoLayoutVer3"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtExpiryDateOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{addNewCardVM.addNewCardModel.txtExpiryDateOne}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_expiry_date2"/>
+                    <LinearLayout android:id="@+id/linearStatusFillTy"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal" style="@style/groupStylegray_50cornerRadius">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtLabel"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{addNewCardVM.addNewCardModel.txtLabel}"
+                            style="@style/txtUrbanistsemibold14" tools:text="@string/lbl_09_07_26"/>
+                        <ImageView android:id="@+id/imageCalendar"
+                            android:layout_height="@dimen/_16pxh"
+                            android:layout_width="@dimen/_15pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_calendar"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_calendar"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearAutoLayoutVer4"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtCVV"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{addNewCardVM.addNewCardModel.txtCVV}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_cvv"/>
+                    <EditText
+                        android:background="@drawable/rectangle_bg_gray_50_radius_16"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanist"
+                        android:hint="@string/lbl_699"
+                        android:id="@+id/etStatusFillTyTwo"
+                        android:inputType="text"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:paddingBottom="@dimen/_20pxv"
+                        android:paddingEnd="@dimen/_30pxh"
+                        android:paddingStart="@dimen/_20pxh"
+                        android:paddingTop="@dimen/_21pxv"
+                        android:singleLine="true"
+                        android:text="@={addNewCardVM.addNewCardModel.etStatusFillTyTwoValue}"
+                        android:textColor="@color/gray_900"
+                        android:textColorHint="@color/gray_900"
+                        android:textFontWeight="600"
+                        android:textSize="@dimen/_14pxh"
+                        android:textStyle="bold" tools:ignore="Autofill"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_gray_800_radius_29"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnAdd"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_58pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_21pxv" android:singleLine="true"
+            android:text="@string/lbl_add" android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_add"/>
+    </LinearLayout>
+</layout>

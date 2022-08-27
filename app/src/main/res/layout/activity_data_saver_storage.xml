@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="dataSaverStorageVM" type="com.musica.app.modules.datasaverstorage.data.viewmodel.DataSaverStorageVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearDataSaverSt"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearNavBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_15pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDataSaverSt"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtDataSaverSt}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/msg_data_saver_st"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <TextView android:ellipsize="end" android:id="@+id/txtDataSaver"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtDataSaver}"
+            style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_data_saver"/>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutVer"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAudioQuality"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtAudioQuality}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_audio_quality"/>
+                <TextView android:id="@+id/txtSetsyouraudio"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtSetsyouraudio}"
+                    style="@style/txtUrbanistromanmedium14" tools:text="@string/msg_sets_your_audio"/>
+            </LinearLayout>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchMaterialStateEnabled"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txtPodcasts"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtPodcasts}"
+            style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_podcasts"/>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutVer1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtDownloadAudio"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtDownloadAudio}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/msg_download_audio"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSavevideopodc"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtSavevideopodc}"
+                    style="@style/txtUrbanistromanmedium14" tools:text="@string/msg_save_video_podc"/>
+            </LinearLayout>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchMaterialStateEnabledOne"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutVer2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtStreamAudioOn"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtStreamAudioOn}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/msg_stream_audio_on"/>
+                <TextView android:id="@+id/txtPlayvideopodc"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtPlayvideopodc}"
+                    style="@style/txtUrbanistromanmedium14" tools:text="@string/msg_play_video_podc"/>
+            </LinearLayout>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchMaterialStateEnabledTwo"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txtStorage"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtStorage}"
+            style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_storage"/>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOtherApps"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtOtherApps}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_other_apps"/>
+            <LinearLayout android:id="@+id/linearRowfilesize"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFilesize"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtFilesize}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_75_4_gb"/>
+                <ImageView android:id="@+id/imageArrowright"
+                    android:layout_height="@dimen/_11pxh"
+                    android:layout_width="@dimen/_5pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowright"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtCache"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtCache}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_cache"/>
+            <LinearLayout android:id="@+id/linearRowfilesizeOne"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFilesizeOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtFilesizeOne}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_120_6_mb"/>
+                <ImageView android:id="@+id/imageArrowrightOne"
+                    android:layout_height="@dimen/_11pxh"
+                    android:layout_width="@dimen/_5pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowright"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor5"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFreeSpace"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtFreeSpace}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_free_space"/>
+            <LinearLayout android:id="@+id/linearRowfilesizeTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFilesizeTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtFilesizeTwo}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_50_5_gb"/>
+                <ImageView android:id="@+id/imageArrowrightTwo"
+                    android:layout_height="@dimen/_11pxh"
+                    android:layout_width="@dimen/_5pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowright"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor6"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutVer3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtRemoveAllDown"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtRemoveAllDown}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/msg_remove_all_down"/>
+                <TextView android:id="@+id/txtRemovealloft"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtRemovealloft}"
+                    style="@style/txtUrbanistromanmedium14" tools:text="@string/msg_remove_all_of_t"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageArrowrightThree"
+                android:layout_height="@dimen/_11pxh"
+                android:layout_width="@dimen/_5pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor7"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutVer4"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtClearCache"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtClearCache}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_clear_cache"/>
+                <TextView android:id="@+id/txtFreeupstorage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:text="@{dataSaverStorageVM.dataSaverStorageModel.txtFreeupstorage}"
+                    style="@style/txtUrbanistromanmedium14" tools:text="@string/msg_free_up_storage"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageArrowrightFour"
+                android:layout_height="@dimen/_11pxh"
+                android:layout_width="@dimen/_5pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

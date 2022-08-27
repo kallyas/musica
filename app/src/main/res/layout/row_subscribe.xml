@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="subscribeRowModel" type="com.musica.app.modules.subscribe.data.model.SubscribeRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAutoLayoutVer"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylecornerRadius_5">
+        <ImageView android:id="@+id/imageVector"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_44pxh"
+            android:layout_width="@dimen/_50pxh"
+            android:scaleType="fitXY" android:src="@drawable/img_vector"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_vector"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearAutoLayoutHor3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtPrice"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{subscribeRowModel.txtPrice}"
+                style="@style/txtUrbanistromanbold32_2" tools:text="@string/lbl_9_99"/>
+            <TextView android:ellipsize="end" android:id="@+id/txtMonth"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{subscribeRowModel.txtMonth}"
+                style="@style/txtUrbanistromanmedium18_2" tools:text="@string/lbl_month"/>
+        </LinearLayout>
+        <View android:background="@color/bluegray_100"
+            android:id="@+id/lineLine"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_332pxh"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutHor4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageCheckmark"
+                android:layout_height="@dimen/_14pxh"
+                android:layout_width="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_checkmark_14X19"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_14X19"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtListeningwith"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{subscribeRowModel.txtListeningwith}"
+                style="@style/txtUrbanistromanmedium16_2" tools:text="@string/msg_listening_with"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutHor"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageCheckmarkOne"
+                android:layout_height="@dimen/_14pxh"
+                android:layout_width="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_checkmark_14X19"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_14X19"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtListeningwitho"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{subscribeRowModel.txtListeningwitho}"
+                style="@style/txtUrbanistromanmedium16_2" tools:text="@string/msg_listening_witho"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutHor1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageCheckmarkTwo"
+                android:layout_height="@dimen/_14pxh"
+                android:layout_width="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_checkmark_14X19"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_14X19"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtShuffleplay"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{subscribeRowModel.txtShuffleplay}"
+                style="@style/txtUrbanistromanmedium16_2" tools:text="@string/msg_shuffle_play"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

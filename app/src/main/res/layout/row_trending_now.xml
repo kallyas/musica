@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="trendingNowRowModel" type="com.musica.app.modules.trendingnow.data.model.TrendingNowRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowloremipsumdol"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnloremipsumdol"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_height="@dimen/_184pxh"
+                android:layout_width="@dimen/_184pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_28pxh}"
+                imageRes="@{@drawable/img_image_45}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_45"/>
+            <TextView android:id="@+id/txtLoremIpsumDol"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@{trendingNowRowModel.txtLoremIpsumDol}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/msg_shades_of_love"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearColumnloremipsumdolOne"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <ImageView android:id="@+id/imageImageOne"
+                android:layout_height="@dimen/_184pxh"
+                android:layout_width="@dimen/_184pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_28pxh}"
+                imageRes="@{@drawable/img_ellipse6}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse6"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtLoremIpsumDolOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@{trendingNowRowModel.txtLoremIpsumDolOne}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/msg_without_you_t"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

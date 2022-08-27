@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listpodcasttitleThreeRowModel" type="com.musica.app.modules.podcastsnotifications.data.model.ListpodcasttitleThreeRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowpodcasttitleThree"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageImageThree"
+            android:layout_height="@dimen/_116pxh"
+            android:layout_width="@dimen/_116pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_20pxh}"
+            imageRes="@{@drawable/img_image_116X116}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_116X116"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutVer"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtPodcastTitleThree"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{listpodcasttitleThreeRowModel.txtPodcastTitleThree}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/msg_621_reid_hoffm"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutHor1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAuthorTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{listpodcasttitleThreeRowModel.txtAuthorTwo}"
+                    style="@style/txtUrbanistromanmedium12" tools:text="@string/msg_invest_like_the"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSeventySix"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{listpodcasttitleThreeRowModel.txtSeventySix}"
+                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTimeThree"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{listpodcasttitleThreeRowModel.txtTimeThree}"
+                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_52_20_mins"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAutoLayoutHor2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/linearRowfavorite"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageFavoriteOne"
+                        android:layout_height="@dimen/_15pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_favorite"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_favorite"/>
+                    <ImageView android:id="@+id/imageSortTwo"
+                        android:layout_height="@dimen/_11pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_sort_11X16"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_sort_11X16"/>
+                    <ImageView android:id="@+id/imageArrowdownThree"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowdown_1"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowdown_1"/>
+                    <ImageView android:id="@+id/imageVectorThree"
+                        android:layout_height="@dimen/_13pxh"
+                        android:layout_width="@dimen/_3pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_vector_gray_900"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_vector_gray_900"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageExcludeThree"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_width="@dimen/_26pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_exclude"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_exclude"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

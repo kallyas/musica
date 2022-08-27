@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="searchResultsSongsVM" type="com.musica.app.modules.searchresultssongs.data.viewmodel.SearchResultsSongsVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnfilledsearch"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSearchResults"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <androidx.appcompat.widget.SearchView
+                android:background="@drawable/rectangle_bg_gray_100_radius_16"
+                android:id="@+id/searchViewFilledSearch"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:theme="@style/searchViewFilledSearch"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@android:color/transparent"
+                app:queryHint="@string/lbl_starboy" app:searchIcon="@drawable/img_close_10X10"/>
+            <HorizontalScrollView android:fillViewport="true"
+                android:id="@+id/horizontalScrollHorizontalscrollsizemediumty"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:scrollbars="none">
+                <LinearLayout android:id="@+id/linearRow"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/linearRowsizemediumty"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSizeMediumTy"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:paddingBottom="@dimen/_8pxv"
+                            android:paddingEnd="@dimen/_20pxh"
+                            android:paddingStart="@dimen/_20pxh"
+                            android:paddingTop="@dimen/_13pxv"
+                            android:singleLine="true"
+                            android:text="@{searchResultsSongsVM.searchResultsSongsModel.txtSizeMediumTy}"
+                            style="@style/txtRoundedOutline" tools:text="@string/lbl_top"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSizeMediumTyOne"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:paddingBottom="@dimen/_8pxv"
+                            android:paddingEnd="@dimen/_20pxh"
+                            android:paddingStart="@dimen/_20pxh"
+                            android:paddingTop="@dimen/_13pxv"
+                            android:singleLine="true"
+                            android:text="@{searchResultsSongsVM.searchResultsSongsModel.txtSizeMediumTyOne}"
+                            style="@style/txtSolidRounded" tools:text="@string/lbl_songs"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSizeMediumTyTwo"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:paddingBottom="@dimen/_10pxv"
+                            android:paddingEnd="@dimen/_20pxh"
+                            android:paddingStart="@dimen/_20pxh"
+                            android:paddingTop="@dimen/_11pxv"
+                            android:singleLine="true"
+                            android:text="@{searchResultsSongsVM.searchResultsSongsModel.txtSizeMediumTyTwo}"
+                            style="@style/txtRoundedOutline" tools:text="@string/lbl_artists"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSizeMediumTyThree"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:paddingBottom="@dimen/_10pxv"
+                            android:paddingEnd="@dimen/_20pxh"
+                            android:paddingStart="@dimen/_20pxh"
+                            android:paddingTop="@dimen/_11pxv"
+                            android:singleLine="true"
+                            android:text="@{searchResultsSongsVM.searchResultsSongsModel.txtSizeMediumTyThree}"
+                            style="@style/txtRoundedOutline" tools:text="@string/lbl_albums"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/linearRowsizemediumtyFour"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSizeMediumTyFour"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:paddingBottom="@dimen/_8pxv"
+                            android:paddingEnd="@dimen/_20pxh"
+                            android:paddingStart="@dimen/_20pxh"
+                            android:paddingTop="@dimen/_8pxv"
+                            android:singleLine="true"
+                            android:text="@{searchResultsSongsVM.searchResultsSongsModel.txtSizeMediumTyFour}"
+                            style="@style/txtRoundedOutline" tools:text="@string/lbl_playlists"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtSizeMediumTyFive"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:letterSpacing="0.01"
+                            android:paddingBottom="@dimen/_8pxv"
+                            android:paddingEnd="@dimen/_20pxh"
+                            android:paddingStart="@dimen/_20pxh"
+                            android:paddingTop="@dimen/_8pxv"
+                            android:singleLine="true"
+                            android:text="@{searchResultsSongsVM.searchResultsSongsModel.txtSizeMediumTyFive}"
+                            style="@style/txtRoundedOutline" tools:text="@string/lbl_profiles"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerListsongtitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_16pxh}" tools:itemCount="8" tools:listitem="@layout/row_listsongtitle"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

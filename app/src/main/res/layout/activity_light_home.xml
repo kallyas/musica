@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="lightHomeVM" type="com.musica.app.modules.lighthome.data.viewmodel.LightHomeVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnellipse"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearRow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/linearRowellipse"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageEllipse"
+                        android:layout_height="@dimen/_48pxh"
+                        android:layout_width="@dimen/_48pxh"
+                        android:scaleType="centerCrop"
+                        circular="@{true}"
+                        imageRes="@{@drawable/img_ellipse_80X80}"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_80X80"/>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumngoodmorning"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtGoodMorning"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{lightHomeVM.lightHomeModel.txtGoodMorning}"
+                            style="@style/txtUrbanistregular16_1" tools:text="@string/lbl_good_morning"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtAndrewAinsley"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{lightHomeVM.lightHomeModel.txtAndrewAinsley}"
+                            style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_andrew_ainsley"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearRowsearch"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageSearch"
+                        android:layout_height="@dimen/_22pxh"
+                        android:layout_width="@dimen/_21pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_search"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_search"/>
+                    <ImageView android:id="@+id/imageGroup"
+                        android:layout_height="@dimen/_22pxh"
+                        android:layout_width="@dimen/_17pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_group_22X17"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_group_22X17"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linear20Lighthome"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowtrendingnow"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTrendingNow"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{lightHomeVM.lightHomeModel.txtTrendingNow}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_trending_now"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSeeAll"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{lightHomeVM.lightHomeModel.txtSeeAll}"
+                    style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_see_all"/>
+            </LinearLayout>
+            <HorizontalScrollView android:fillViewport="true"
+                android:id="@+id/horizontalScrollHorizontalscrollloremipsumdol"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:scrollbars="none">
+                <LinearLayout android:id="@+id/linearRowloremipsumdol"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnloremipsumdol"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageImageOne"
+                            android:layout_height="@dimen/_160pxh"
+                            android:layout_width="@dimen/_160pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_24pxh}"
+                            imageRes="@{@drawable/img_image_45}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_image_45"/>
+                        <TextView android:id="@+id/txtLoremIpsumDol"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:text="@{lightHomeVM.lightHomeModel.txtLoremIpsumDol}"
+                            style="@style/txtUrbanistromanbold18" tools:text="@string/msg_shades_of_love"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnloremipsumdolOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageImageTwo"
+                            android:layout_height="@dimen/_160pxh"
+                            android:layout_width="@dimen/_160pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_24pxh}"
+                            imageRes="@{@drawable/img_ellipse6}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse6"/>
+                        <TextView android:id="@+id/txtLoremIpsumDolOne"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:text="@{lightHomeVM.lightHomeModel.txtLoremIpsumDolOne}"
+                            style="@style/txtUrbanistromanbold18" tools:text="@string/msg_without_you_t"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnloremipsumdolTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageImageThree"
+                            android:layout_height="@dimen/_160pxh"
+                            android:layout_width="@dimen/_160pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_24pxh}"
+                            imageRes="@{@drawable/img_image_55}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_image_55"/>
+                        <TextView android:id="@+id/txtLoremIpsumDolTwo"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:text="@{lightHomeVM.lightHomeModel.txtLoremIpsumDolTwo}"
+                            style="@style/txtUrbanistromanbold18" tools:text="@string/msg_save_your_tears"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowpopularartists"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPopularArtists"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{lightHomeVM.lightHomeModel.txtPopularArtists}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_popular_artists"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSeeAllOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{lightHomeVM.lightHomeModel.txtSeeAllOne}"
+                    style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_see_all"/>
+            </LinearLayout>
+            <HorizontalScrollView android:fillViewport="true"
+                android:id="@+id/horizontalScrollHorizontalscrollartistsname"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:scrollbars="none">
+                <LinearLayout android:id="@+id/linearRowartistsname"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:id="@+id/linearColumnartistsname"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageImageFour"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_160pxh"
+                            android:layout_width="@dimen/_160pxh"
+                            android:scaleType="centerCrop"
+                            circular="@{true}"
+                            imageRes="@{@drawable/img_ellipse}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtArtistsName"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{lightHomeVM.lightHomeModel.txtArtistsName}"
+                            style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_ariana_grande"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center_horizontal"
+                        android:id="@+id/linearColumnartistsnameOne"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageImageFive"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_160pxh"
+                            android:layout_width="@dimen/_160pxh"
+                            android:scaleType="centerCrop"
+                            circular="@{true}"
+                            imageRes="@{@drawable/img_image_16}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_image_16"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="center_horizontal"
+                            android:id="@+id/txtArtistsNameOne"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{lightHomeVM.lightHomeModel.txtArtistsNameOne}"
+                            style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_the_weeknd"/>
+                    </LinearLayout>
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearColumnartistsnameTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="vertical">
+                        <ImageView android:id="@+id/imageImageSix"
+                            android:layout_height="@dimen/_160pxh"
+                            android:layout_width="@dimen/_160pxh"
+                            android:scaleType="centerCrop"
+                            circular="@{true}"
+                            imageRes="@{@drawable/img_image_56}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_image_56"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtArtistsNameTwo"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:letterSpacing="0.01"
+                            android:singleLine="true"
+                            android:text="@{lightHomeVM.lightHomeModel.txtArtistsNameTwo}"
+                            style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_acidrap"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutHor"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTopCharts"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{lightHomeVM.lightHomeModel.txtTopCharts}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_top_charts"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSeeAllTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{lightHomeVM.lightHomeModel.txtSeeAllTwo}"
+                    style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_see_all"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="end"
+                android:id="@+id/linearRowprice"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerListprice"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_width="0dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_12pxh}" tools:itemCount="2" tools:listitem="@layout/row_listprice"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnpriceTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <FrameLayout android:id="@+id/frameStackpriceTwo"
+                        android:layout_height="@dimen/_160pxv" android:layout_width="@dimen/_160pxh">
+                        <ImageView android:id="@+id/imageImageNine"
+                            android:layout_gravity="start"
+                            android:layout_height="@dimen/_160pxh"
+                            android:layout_width="@dimen/_160pxh"
+                            android:scaleType="fitXY"
+                            cornerRadius="@{@dimen/_24pxh}"
+                            imageRes="@{@drawable/img_image_59}"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_image_59"/>
+                        <TextView android:ellipsize="end"
+                            android:gravity="top|center"
+                            android:id="@+id/txtPriceTwo"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:singleLine="true"
+                            android:text="@{lightHomeVM.lightHomeModel.txtPriceTwo}"
+                            style="@style/txtUrbanistromanbold24_2" tools:text="@string/lbl_top_hits"/>
+                    </FrameLayout>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtPriceThree"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{lightHomeVM.lightHomeModel.txtPriceThree}"
+                        style="@style/txtUrbanistromanbold18" tools:text="@string/msg_top_hits_indo"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <FrameLayout android:id="@+id/frameBottombar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" style="@style/groupStylewhite_1">
+            <LinearLayout android:id="@+id/linearAutoLayoutHor1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/linearAutoLayoutVer"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageDownload"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_19pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_download_20X19"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_download_20X19"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtHome"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{lightHomeVM.lightHomeModel.txtHome}"
+                        style="@style/txtUrbanistromanbold10" tools:text="@string/lbl_home"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearAutoLayoutVer1"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageArrowleft"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_19pxh"
+                        android:layout_width="@dimen/_19pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowleft_19X19"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft_19X19"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtExplore"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{lightHomeVM.lightHomeModel.txtExplore}"
+                        style="@style/txtUrbanistromanmedium10_1" tools:text="@string/lbl_explore"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearAutoLayoutVer2"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageMenu"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_18pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_menu"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_menu"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtLibrary"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{lightHomeVM.lightHomeModel.txtLibrary}"
+                        style="@style/txtUrbanistromanmedium10_1" tools:text="@string/lbl_library"/>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/linearAutoLayoutVer3"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" android:layout_width="0dp" android:orientation="vertical">
+                    <ImageView android:id="@+id/imageUser"
+                        android:layout_gravity="center"
+                        android:layout_height="@dimen/_18pxh"
+                        android:layout_width="@dimen/_14pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_user_18X14"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_user_18X14"/>
+                    <TextView android:ellipsize="end"
+                        android:gravity="center_horizontal"
+                        android:id="@+id/txtProfile"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{lightHomeVM.lightHomeModel.txtProfile}"
+                        style="@style/txtUrbanistromanmedium10_1" tools:text="@string/lbl_profile"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

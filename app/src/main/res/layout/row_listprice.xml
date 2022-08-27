@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listpriceRowModel" type="com.musica.app.modules.lighthome.data.model.ListpriceRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnprice1"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameStackprice"
+            android:layout_height="@dimen/_160pxv" android:layout_width="@dimen/_160pxh">
+            <ImageView android:id="@+id/imageImageSeven"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_160pxh"
+                android:layout_width="@dimen/_160pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_24pxh}"
+                imageRes="@{@drawable/img_image_57}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_57"/>
+            <LinearLayout android:id="@+id/linearColumnprice2"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{listpriceRowModel.txtPrice}"
+                    style="@style/txtUrbanistromanbold24_2" tools:text="@string/lbl_top_100"/>
+                <View android:background="@color/bluegray_100"
+                    android:id="@+id/lineLine"
+                    android:layout_gravity="start"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_120pxh"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtCountry"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{listpriceRowModel.txtCountry}"
+                    style="@style/txtUrbanistromanbold12" tools:text="@string/lbl_global"/>
+            </LinearLayout>
+        </FrameLayout>
+        <TextView android:ellipsize="end" android:id="@+id/txtPriceOne"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{listpriceRowModel.txtPriceOne}"
+            style="@style/txtUrbanistromanbold18" tools:text="@string/msg_top_100_globa"/>
+    </LinearLayout>
+</layout>
