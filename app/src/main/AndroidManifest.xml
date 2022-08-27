@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest package="com.musica.app" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name" android:largeHeap="true"
+        android:name="com.musica.app.appcomponents.di.MyApp"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true" android:theme="@style/Theme.MyApp" android:usesCleartextTraffic="true">
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/>
+        <activity
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" android:name="com.facebook.FacebookActivity"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true"
+            android:name="com.musica.app.modules.searchtypekeyword.ui.SearchTypeKeywordActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.musica.app.modules.downloaded.ui.DownloadedActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.charts.ui.ChartsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.selectpaymentmethod.ui.SelectPaymentMethodActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.podcasts.ui.PodcastsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.albums.ui.AlbumsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.songsnotifications.ui.SongsNotificationsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.language.ui.LanguageActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.appnavigation.ui.AppNavigationActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.artistdetails.ui.ArtistDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.editprofile.ui.EditProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.paymentmethod.ui.PaymentMethodActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.mylibrary.ui.MyLibraryActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.moreoptionsone.ui.MoreOptionsOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.lightletsyouin.ui.LightLetsYouInActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.artists.ui.ArtistsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.playlistdetailsone.ui.PlaylistDetailsOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.setfingerprint.ui.SetFingerprintActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.explore.ui.ExploreActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.searchresiltprofile1.ui.SearchResiltProfile1Activity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.playlistdetails.ui.PlaylistDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.profiledetailsone.ui.ProfileDetailsOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.playback.ui.PlaybackActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.historymusic.ui.HistoryMusicActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.trendingnow.ui.TrendingNowActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.podcastepisodedetails.ui.PodcastEpisodeDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.downloads.ui.DownloadsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.signin.ui.SignInActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.downloadsone.ui.DownloadsOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.podcastsnotifications.ui.PodcastsNotificationsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.yourlikes.ui.YourLikesActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.audiovideo.ui.AudioVideoActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.subscribe.ui.SubscribeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.searchresulttop.ui.SearchResultTopActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.newreleases.ui.NewReleasesActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.popularartists.ui.PopularArtistsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.addnewcard.ui.AddNewCardActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.signup.ui.SignUpActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.lightalbumdetails.ui.LightAlbumDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.searchresultalbum.ui.SearchResultAlbumActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.lyrics.ui.LyricsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.topalbumsglobal.ui.TopAlbumsGlobalActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.profilesettings.ui.ProfileSettingsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.filledotp.ui.FilledOtpActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.songplayoverscreen.ui.SongPlayOverScreenActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.songplay.ui.SongPlayActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.podcastdetails.ui.PodcastDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.profile.ui.ProfileActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.createnewpin.ui.CreateNewPinActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.songdetails.ui.SongDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.lightwalkthrough.ui.LightWalkthroughActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.artistsearchresult.ui.ArtistSearchResultActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.followersdetails.ui.FollowersDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.followartists.ui.FollowArtistsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.searchresultssongs.ui.SearchResultsSongsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.searchnotfound.ui.SearchNotFoundActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.notificationsettings.ui.NotificationSettingsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.historypodcast.ui.HistoryPodcastActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.security.ui.SecurityActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.forgotpassword.ui.ForgotPasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.summaryone.ui.SummaryOneActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.queue.ui.QueueActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.moreoptions.ui.MoreOptionsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.lightalbumsmoreoption.ui.LightAlbumsMoreOptionActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.splash.ui.SplashActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.lighthome.ui.LightHomeActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.songs.ui.SongsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.profiledetails.ui.ProfileDetailsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.createnewpassword.ui.CreateNewPasswordActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.podcasters.ui.PodcastersActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.playlists.ui.PlaylistsActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.musica.app.modules.datasaverstorage.ui.DataSaverStorageActivity" android:screenOrientation="portrait"/>
+    </application>
+</manifest>

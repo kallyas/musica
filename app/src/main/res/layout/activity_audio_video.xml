@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="audioVideoVM" type="com.musica.app.modules.audiovideo.data.viewmodel.AudioVideoVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearAudioVideo"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearNavBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_15pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAudioVideo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{audioVideoVM.audioVideoModel.txtAudioVideo}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_audio_video"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtAudioQuality"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{audioVideoVM.audioVideoModel.txtAudioQuality}"
+            style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_audio_quality"/>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWiFiStreaming"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{audioVideoVM.audioVideoModel.txtWiFiStreaming}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_wi_fi_streaming"/>
+            <LinearLayout android:id="@+id/linearRowhigh"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHigh"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{audioVideoVM.audioVideoModel.txtHigh}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_high"/>
+                <ImageView android:id="@+id/imageArrowright"
+                    android:layout_height="@dimen/_11pxh"
+                    android:layout_width="@dimen/_5pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowright"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDataCellularS"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{audioVideoVM.audioVideoModel.txtDataCellularS}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/msg_data_cellular_s"/>
+            <LinearLayout android:id="@+id/linearRowautomatic"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAutomatic"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{audioVideoVM.audioVideoModel.txtAutomatic}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_automatic"/>
+                <ImageView android:id="@+id/imageArrowrightOne"
+                    android:layout_height="@dimen/_11pxh"
+                    android:layout_width="@dimen/_5pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowright"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtAutoAdjustQua"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{audioVideoVM.audioVideoModel.txtAutoAdjustQua}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/msg_auto_adjust_qua"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchMaterialStateEnabled"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDownload"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{audioVideoVM.audioVideoModel.txtDownload}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_download"/>
+            <LinearLayout android:id="@+id/linearRownormal"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtNormal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{audioVideoVM.audioVideoModel.txtNormal}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_normal"/>
+                <ImageView android:id="@+id/imageArrowrightTwo"
+                    android:layout_height="@dimen/_11pxh"
+                    android:layout_width="@dimen/_5pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowright"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDownloadOnlyU"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{audioVideoVM.audioVideoModel.txtDownloadOnlyU}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/msg_download_only_u"/>
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchMaterialStateEnabledOne"
+                android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor5"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtEqualizer"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{audioVideoVM.audioVideoModel.txtEqualizer}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_equalizer"/>
+            <ImageView android:id="@+id/imageArrowrightThree"
+                android:layout_height="@dimen/_11pxh"
+                android:layout_width="@dimen/_5pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowright"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+        </LinearLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtVideoQuality"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{audioVideoVM.audioVideoModel.txtVideoQuality}"
+            style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_video_quality"/>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor6"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtWiFiStreamingOne"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{audioVideoVM.audioVideoModel.txtWiFiStreamingOne}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_wi_fi_streaming"/>
+            <LinearLayout android:id="@+id/linearRowhighOne"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtHighOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{audioVideoVM.audioVideoModel.txtHighOne}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_high"/>
+                <ImageView android:id="@+id/imageArrowrightFour"
+                    android:layout_height="@dimen/_11pxh"
+                    android:layout_width="@dimen/_5pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowright"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor7"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtDataCellularSOne"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{audioVideoVM.audioVideoModel.txtDataCellularSOne}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/msg_data_cellular_s"/>
+            <LinearLayout android:id="@+id/linearRowmedium"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMedium"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{audioVideoVM.audioVideoModel.txtMedium}"
+                    style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_medium"/>
+                <ImageView android:id="@+id/imageArrowrightFive"
+                    android:layout_height="@dimen/_11pxh"
+                    android:layout_width="@dimen/_5pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowright"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowright"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

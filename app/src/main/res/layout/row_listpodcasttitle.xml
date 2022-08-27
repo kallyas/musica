@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listpodcasttitleRowModel" type="com.musica.app.modules.podcastoptions.data.model.ListpodcasttitleRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowpodcasttitle"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <ImageView android:id="@+id/imageImageThree"
+            android:layout_height="@dimen/_116pxh"
+            android:layout_width="@dimen/_116pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_20pxh}"
+            imageRes="@{@drawable/img_image}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutVer"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:id="@+id/txtPodcastTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{listpodcasttitleRowModel.txtPodcastTitle}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/msg_837_tristan_ha"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutHor1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAuthor"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{listpodcasttitleRowModel.txtAuthor}"
+                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_apple_talk"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTwentySix"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{listpodcasttitleRowModel.txtTwentySix}"
+                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTime"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{listpodcasttitleRowModel.txtTime}"
+                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_48_26_mins"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAutoLayoutHor2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <LinearLayout android:id="@+id/linearRowclock"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="horizontal">
+                    <ImageView android:id="@+id/imageClock"
+                        android:layout_height="@dimen/_15pxh"
+                        android:layout_width="@dimen/_15pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_clock_15X15"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_clock_15X15"/>
+                    <ImageView android:id="@+id/imageSort"
+                        android:layout_height="@dimen/_11pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_sort_11X16"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_sort_11X16"/>
+                    <ImageView android:id="@+id/imageArrowdown"
+                        android:layout_height="@dimen/_16pxh"
+                        android:layout_width="@dimen/_16pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_arrowdown_16X16"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_arrowdown_16X16"/>
+                    <ImageView android:id="@+id/imageVector"
+                        android:layout_height="@dimen/_13pxh"
+                        android:layout_width="@dimen/_3pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_vector_gray_900"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_vector_gray_900"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageExclude"
+                    android:layout_height="@dimen/_26pxh"
+                    android:layout_width="@dimen/_26pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_exclude"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_exclude"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

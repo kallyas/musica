@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listmonoaudioRowModel" type="com.musica.app.modules.playback.data.model.ListmonoaudioRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAutoLayoutHor"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutVer"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMonoAudio"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{listmonoaudioRowModel.txtMonoAudio}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_mono_audio"/>
+            <TextView android:id="@+id/txtMakestkeleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@{listmonoaudioRowModel.txtMakestkeleft}"
+                style="@style/txtUrbanistromanmedium14" tools:text="@string/msg_makes_tke_left"/>
+        </LinearLayout>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchMaterialStateDisabledOne"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+    </LinearLayout>
+</layout>

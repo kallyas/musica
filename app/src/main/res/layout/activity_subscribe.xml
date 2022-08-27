@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="subscribeVM" type="com.musica.app.modules.subscribe.data.viewmodel.SubscribeVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearSubscribe"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_A700">
+            <ImageView android:id="@+id/imageArrowleft"
+                android:layout_height="@dimen/_15pxh"
+                android:layout_width="@dimen/_19pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowleft"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtSubscribetoPr"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{subscribeVM.subscribeModel.txtSubscribetoPr}"
+                style="@style/txtUrbanistromanbold32_1" tools:text="@string/msg_subscribe_to_pr"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtEnjoylistening"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@{subscribeVM.subscribeModel.txtEnjoylistening}"
+                style="@style/txtUrbanistromanmedium16_1" tools:text="@string/msg_enjoy_listening2"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerSubscribe"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                itemSpace="@{@dimen/_24pxh}" tools:itemCount="3" tools:listitem="@layout/row_subscribe"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

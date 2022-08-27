@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="gridloremipsumdolOneRowModel" type="com.musica.app.modules.searchresultplaylist.data.model.GridloremipsumdolOneRowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnloremipsumdolOne"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageView android:id="@+id/imageImageTwo"
+            android:layout_height="@dimen/_184pxh"
+            android:layout_width="@dimen/_184pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_ellipse}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse"/>
+        <TextView android:gravity="center_horizontal"
+            android:id="@+id/txtLoremIpsumDolOne"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:text="@{gridloremipsumdolOneRowModel.txtLoremIpsumDolOne}"
+            style="@style/txtUrbanistromanbold18" tools:text="@string/msg_ariana_grande3"/>
+    </LinearLayout>
+</layout>

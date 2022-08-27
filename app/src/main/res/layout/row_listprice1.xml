@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listprice1RowModel" type="com.musica.app.modules.charts.data.model.Listprice1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnprice"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content" android:orientation="vertical">
+        <FrameLayout android:id="@+id/frameStackprice"
+            android:layout_height="@dimen/_184pxv" android:layout_width="@dimen/_184pxh">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_184pxh"
+                android:layout_width="@dimen/_184pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_28pxh}"
+                imageRes="@{@drawable/img_image_57}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_57"/>
+            <TextView android:gravity="top|center"
+                android:id="@+id/txtPrice"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="@{listprice1RowModel.txtPrice}"
+                style="@style/txtUrbanistromanbold24_2" tools:text="@string/msg_top_albums_glob"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtLoremIpsumDol"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{listprice1RowModel.txtLoremIpsumDol}"
+            style="@style/txtUrbanistromanbold20" tools:text="@string/msg_top_albums_glob2"/>
+    </LinearLayout>
+</layout>

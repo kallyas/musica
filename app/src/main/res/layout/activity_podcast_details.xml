@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="podcastDetailsVM" type="com.musica.app.modules.podcastdetails.data.viewmodel.PodcastDetailsVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnarrowleft"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearNavBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_15pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <ImageView android:id="@+id/imageClock"
+                    android:layout_height="@dimen/_21pxh"
+                    android:layout_width="@dimen/_21pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_clock"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_clock"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp" android:layout_weight="1" android:layout_width="match_parent">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearPodcastDetails"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="vertical">
+                <ImageView android:id="@+id/imageEllipse"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_250pxh"
+                    android:layout_width="@dimen/_250pxh"
+                    android:scaleType="centerCrop" circular="@{true}"
+                    imageRes="@{@drawable/img_ellipse}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtArtistName"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{podcastDetailsVM.podcastDetailsModel.txtArtistName}"
+                    style="@style/txtUrbanistromanbold32" tools:text="@string/lbl_ariana_grande"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtDuration"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{podcastDetailsVM.podcastDetailsModel.txtDuration}"
+                    style="@style/txtUrbanistromanmedium18" tools:text="@string/msg_55_278_829_mont"/>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearAutoLayoutHor"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:background="@drawable/rectangle_bg_gray_802_radius_22_5"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/urbanist"
+                        android:gravity="center"
+                        android:id="@+id/btnFollow"
+                        android:layout_height="@dimen/_45pxv"
+                        android:layout_width="@dimen/_101pxh"
+                        android:letterSpacing="0.01"
+                        android:paddingBottom="@dimen/_13pxv"
+                        android:paddingEnd="@dimen/_24pxh"
+                        android:paddingStart="@dimen/_24pxh"
+                        android:paddingTop="@dimen/_13pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_follow"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white_A700"
+                        android:textFontWeight="700"
+                        android:textSize="@dimen/_18pxh"
+                        android:textStyle="bold" tools:text="@string/lbl_follow"/>
+                    <ImageView android:id="@+id/imageGroup"
+                        android:layout_height="@dimen/_19pxh"
+                        android:layout_width="@dimen/_14pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_group_22X17"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_group_22X17"/>
+                    <ImageView android:id="@+id/imageShare"
+                        android:layout_height="@dimen/_20pxh"
+                        android:layout_width="@dimen/_20pxh"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/img_share"
+                        tools:ignore="ContentDescription" tools:src="@drawable/img_share"/>
+                    <View android:background="@color/gray_900"
+                        android:id="@+id/lineVector"
+                        android:layout_height="@dimen/_16pxv" android:layout_width="@dimen/_4pxh"/>
+                </LinearLayout>
+                <TextView android:gravity="center_horizontal"
+                    android:id="@+id/txtDescription"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:text="@{podcastDetailsVM.podcastDetailsModel.txtDescription}"
+                    style="@style/txtUrbanistromanmedium16_1" tools:text="@string/msg_lorem_ipsum_dol"/>
+                <View android:background="@color/bluegray_100"
+                    android:id="@+id/lineLine"
+                    android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_380pxh"/>
+                <LinearLayout android:id="@+id/linearAutoLayoutHor1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="horizontal">
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtEpisodes"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:singleLine="true"
+                        android:text="@{podcastDetailsVM.podcastDetailsModel.txtEpisodes}"
+                        style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_episodes"/>
+                    <TextView android:ellipsize="end"
+                        android:id="@+id/txtSeeAll"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.01"
+                        android:singleLine="true"
+                        android:text="@{podcastDetailsVM.podcastDetailsModel.txtSeeAll}"
+                        style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_see_all"/>
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerListpodcasttitle"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    itemSpace="@{@dimen/_25pxh}" tools:itemCount="3" tools:listitem="@layout/row_listpodcasttitle3"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

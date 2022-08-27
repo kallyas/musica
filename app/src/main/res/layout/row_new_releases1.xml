@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="newReleases1RowModel" type="com.musica.app.modules.newreleases.data.model.NewReleases1RowModel"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearColumnpain"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageView android:id="@+id/imageImageTwo"
+            android:layout_height="@dimen/_184pxh"
+            android:layout_width="@dimen/_184pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_28pxh}"
+            imageRes="@{@drawable/img_image_60}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_60"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPain"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{newReleases1RowModel.txtPain}"
+            style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_pain"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtRyanJones"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{newReleases1RowModel.txtRyanJones}"
+            style="@style/txtUrbanistsemibold14_2" tools:text="@string/lbl_ryan_jones"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="editProfileVM" type="com.musica.app.modules.editprofile.data.viewmodel.EditProfileVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearEditProfile"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearNavBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_15pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtEditProfile"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{editProfileVM.editProfileModel.txtEditProfile}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_edit_profile"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_50_radius_16"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_andrew_ainsley"
+            android:id="@+id/etStatusFillTy" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_22pxv" android:singleLine="true"
+            android:text="@={editProfileVM.editProfileModel.etStatusFillTyValue}"
+            android:textColor="@color/gray_900"
+            android:textColorHint="@color/gray_900"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:ignore="Autofill"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_50_radius_16"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_andrew"
+            android:id="@+id/etStatusFillTyOne" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_20pxv" android:singleLine="true"
+            android:text="@={editProfileVM.editProfileModel.etStatusFillTyOneValue}"
+            android:textColor="@color/gray_900"
+            android:textColorHint="@color/gray_900"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:ignore="Autofill"/>
+        <LinearLayout android:id="@+id/linearStatusFillTy"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_50cornerRadius">
+            <TextView android:ellipsize="end" android:id="@+id/txtLabel"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{editProfileVM.editProfileModel.txtLabel}"
+                style="@style/txtUrbanistsemibold14" tools:text="@string/lbl_12_27_1995"/>
+            <ImageView android:id="@+id/imageCalendar"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_15pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_calendar"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_calendar"/>
+        </LinearLayout>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_50_radius_16"
+            android:drawableEnd="@drawable/img_checkmark"
+            android:drawablePadding="@dimen/_30pxh"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/msg_andrew_ainsley"
+            android:id="@+id/etEmail" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_22pxh"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_22pxv" android:singleLine="true"
+            android:text="@={editProfileVM.editProfileModel.etEmailValue}"
+            android:textColor="@color/gray_900"
+            android:textColorHint="@color/gray_900"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:ignore="Autofill"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearStatusFillTy1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_50cornerRadius">
+            <ImageView android:id="@+id/imageFolder"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_folder"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_folder"/>
+            <ImageView android:id="@+id/imageArrowdown"
+                android:layout_height="@dimen/_4pxh"
+                android:layout_width="@dimen/_9pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowdown_gray_900"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowdown_gray_900"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtFrameEight"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_7pxv"
+                android:paddingStart="@dimen/_5pxh"
+                android:paddingTop="@dimen/_10pxv"
+                android:singleLine="true"
+                android:text="@{editProfileVM.editProfileModel.txtFrameEight}"
+                style="@style/txtSolid" tools:text="@string/msg_1_111_467_378"/>
+        </LinearLayout>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_50_radius_16"
+            android:drawableEnd="@drawable/img_location"
+            android:drawablePadding="@dimen/_30pxh"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_male" android:id="@+id/etGender"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_25pxh"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_20pxv" android:singleLine="true"
+            android:text="@={editProfileVM.editProfileModel.etGenderValue}"
+            android:textColor="@color/gray_900"
+            android:textColorHint="@color/gray_900"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:ignore="Autofill"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_gray_800_radius_29"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnUpdate"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_58pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_20pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_20pxv" android:singleLine="true"
+            android:text="@string/lbl_update"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_update"/>
+    </LinearLayout>
+</layout>

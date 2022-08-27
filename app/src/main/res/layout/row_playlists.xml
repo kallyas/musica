@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="playlistsRowModel" type="com.musica.app.modules.playlists.data.model.PlaylistsRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearTypeListThem"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearRowlightbulb"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <ImageButton
+                android:background="@drawable/rectangle_gradient_s_red_700_e_red_a700_radius_40"
+                android:id="@+id/btnLightbulb"
+                android:layout_height="@dimen/_80pxh"
+                android:layout_width="@dimen/_80pxh"
+                android:paddingHorizontal="@dimen/_26pxh"
+                android:paddingVertical="@dimen/_26pxv"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_lightbulb_80X80" tools:ignore="ContentDescription"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutVer"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLoremIpsumOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{playlistsRowModel.txtLoremIpsumOne}"
+                    style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_your_likes"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtSongsCounter"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{playlistsRowModel.txtSongsCounter}"
+                    style="@style/txtUrbanistromanmedium12" tools:text="@string/lbl_270_songs"/>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageVector"
+            android:layout_height="@dimen/_13pxh"
+            android:layout_width="@dimen/_3pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_vector_gray_900"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_vector_gray_900"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="summaryVM" type="com.musica.app.modules.summary.data.viewmodel.SummaryVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearSummary"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearThemeLightMod"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical" style="@style/groupStylewhite_4">
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearRowellipseFive"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <LinearLayout android:gravity="center_horizontal"
+                    android:id="@+id/linearColumnellipse"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" android:orientation="vertical">
+                    <LinearLayout android:gravity="start"
+                        android:id="@+id/linearRowellipse"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <View
+                            android:background="@drawable/rectangle_bg_green_300_radius_10"
+                            android:id="@+id/viewEllipse"
+                            android:layout_height="@dimen/_20pxh" android:layout_width="@dimen/_20pxh"/>
+                        <View
+                            android:background="@drawable/rectangle_bg_green_300_radius_2_5"
+                            android:id="@+id/viewEllipseOne"
+                            android:layout_height="@dimen/_5pxh" android:layout_width="@dimen/_5pxh"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/linearRowellipseTwo"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" android:orientation="horizontal">
+                        <View
+                            android:background="@drawable/rectangle_bg_green_300_radius_1"
+                            android:id="@+id/viewEllipseTwo"
+                            android:layout_height="@dimen/_2pxh" android:layout_width="@dimen/_2pxh"/>
+                        <View
+                            android:background="@drawable/rectangle_bg_green_300_radius_5"
+                            android:id="@+id/viewEllipseThree"
+                            android:layout_height="@dimen/_10pxh" android:layout_width="@dimen/_10pxh"/>
+                        <FrameLayout
+                            android:id="@+id/frameStackellipseFour"
+                            android:layout_height="@dimen/_143pxv" android:layout_width="@dimen/_143pxh">
+                            <FrameLayout
+                                android:id="@+id/frameStackvector"
+                                android:layout_gravity="center"
+                                android:layout_height="@dimen/_141pxv"
+                                android:layout_width="@dimen/_141pxh" style="@style/groupStylegreen_A700cornerRadius">
+                                <ImageView android:id="@+id/imageVector"
+                                    android:layout_gravity="center"
+                                    android:layout_height="@dimen/_43pxh"
+                                    android:layout_width="@dimen/_49pxh"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/img_vector"
+                                    tools:ignore="ContentDescription" tools:src="@drawable/img_vector"/>
+                            </FrameLayout>
+                            <View
+                                android:background="@drawable/rectangle_bg_green_300_radius_2_5"
+                                android:id="@+id/viewEllipseFour"
+                                android:layout_gravity="bottom|end"
+                                android:layout_height="@dimen/_5pxh" android:layout_width="@dimen/_5pxh"/>
+                        </FrameLayout>
+                    </LinearLayout>
+                    <View
+                        android:background="@drawable/rectangle_bg_green_300_radius_1"
+                        android:id="@+id/viewEllipseFive"
+                        android:layout_gravity="end"
+                        android:layout_height="@dimen/_2pxh" android:layout_width="@dimen/_2pxh"/>
+                    <View
+                        android:background="@drawable/rectangle_bg_green_300_radius_3_5"
+                        android:id="@+id/viewEllipseSix"
+                        android:layout_gravity="start"
+                        android:layout_height="@dimen/_7pxh" android:layout_width="@dimen/_7pxh"/>
+                </LinearLayout>
+                <LinearLayout android:gravity="start"
+                    android:id="@+id/linearColumnellipseSeven"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content" android:orientation="vertical">
+                    <View
+                        android:background="@drawable/rectangle_bg_green_300_radius_7_5"
+                        android:id="@+id/viewEllipseSeven"
+                        android:layout_gravity="end"
+                        android:layout_height="@dimen/_15pxh" android:layout_width="@dimen/_15pxh"/>
+                    <View
+                        android:background="@drawable/rectangle_bg_green_300_radius_2_5"
+                        android:id="@+id/viewEllipseEight"
+                        android:layout_height="@dimen/_5pxh" android:layout_width="@dimen/_5pxh"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtModalTitle"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{summaryVM.summaryModel.txtModalTitle}"
+                style="@style/txtUrbanistromanbold24_4" tools:text="@string/msg_congratulations"/>
+            <TextView android:gravity="center_horizontal"
+                android:id="@+id/txtDuration"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:text="@{summaryVM.summaryModel.txtDuration}"
+                style="@style/txtUrbanistregular16" tools:text="@string/msg_you_have_succes"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_gray_800_radius_29"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnOk"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_276pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_21pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_30pxh"
+                android:paddingTop="@dimen/_21pxv"
+                android:singleLine="true" android:text="@string/lbl_ok"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_ok"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

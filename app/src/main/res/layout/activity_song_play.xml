@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="songPlayVM" type="com.musica.app.modules.songplay.data.viewmodel.SongPlayVM"/>
+    </data>
+    <LinearLayout android:gravity="center_horizontal"
+        android:id="@+id/linearSongPlay"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:gravity="center_horizontal"
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:id="@+id/linearNavBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_15pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <ImageView android:id="@+id/imageClock"
+                    android:layout_height="@dimen/_21pxh"
+                    android:layout_width="@dimen/_21pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_clock"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_clock"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <ImageView android:id="@+id/imageImage"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_380pxh"
+            android:layout_width="@dimen/_380pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_40pxh}"
+            imageRes="@{@drawable/img_image_16}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_16"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtTitleHere"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{songPlayVM.songPlayModel.txtTitleHere}"
+            style="@style/txtUrbanistromanbold32" tools:text="@string/lbl_starboy"/>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtAuthorName"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{songPlayVM.songPlayModel.txtAuthorName}"
+            style="@style/txtUrbanistsemibold18_4" tools:text="@string/msg_the_weeknd_daf"/>
+        <View android:background="@color/bluegray_100"
+            android:id="@+id/lineLine"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_380pxh"/>
+        <com.google.android.material.slider.Slider
+            android:gravity="center_horizontal"
+            android:id="@+id/seekBarGroup"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:value="80"
+            android:valueFrom="0" android:valueTo="100"
+            app:labelBehavior="gone" app:thumbRadius="@dimen/_9pxh" app:trackColorInactive="@color/gray_300"/>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end" android:id="@+id/txtTime"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{songPlayVM.songPlayModel.txtTime}"
+                style="@style/txtUrbanistromanmedium16" tools:text="@string/lbl_03_35"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTimeOne"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{songPlayVM.songPlayModel.txtTimeOne}"
+                style="@style/txtUrbanistromanmedium16" tools:text="@string/lbl_03_50"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutHor1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageRewind"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_22pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_rewind"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rewind"/>
+            <ImageView android:id="@+id/imageGroupOne"
+                android:layout_height="@dimen/_27pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_group_27X24"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_group_27X24"/>
+            <ImageView android:id="@+id/imageExclude"
+                android:layout_height="@dimen/_66pxh"
+                android:layout_width="@dimen/_66pxh"
+                android:scaleType="fitXY"
+                imageRes="@{@drawable/img_exclude}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_exclude"/>
+            <ImageView android:id="@+id/imageGroupTwo"
+                android:layout_height="@dimen/_27pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_group_27X24"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_group_27X24"/>
+            <ImageView android:id="@+id/imageRewindOne"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_22pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_rewind"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_rewind"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageDashboard"
+                android:layout_height="@dimen/_20pxh"
+                android:layout_width="@dimen/_23pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_dashboard"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_dashboard"/>
+            <ImageView android:id="@+id/imageInfo"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_width="@dimen/_21pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_info"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_info"/>
+            <ImageView android:id="@+id/imageMusic"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_23pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_music"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_music"/>
+            <View android:background="@color/gray_900"
+                android:id="@+id/lineVector"
+                android:layout_height="@dimen/_18pxv" android:layout_width="@dimen/_4pxh"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageArrowup"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_7pxh"
+            android:layout_width="@dimen/_14pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowup"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowup"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtLyrics"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{songPlayVM.songPlayModel.txtLyrics}"
+            style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_lyrics"/>
+    </LinearLayout>
+</layout>

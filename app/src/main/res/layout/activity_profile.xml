@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="profileVM" type="com.musica.app.modules.profile.data.viewmodel.ProfileVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearProfile"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearNavBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_15pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFillYourProfi"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{profileVM.profileModel.txtFillYourProfi}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/msg_fill_your_profi"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <FrameLayout android:id="@+id/frameTypeEditAvata"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_140pxv" android:layout_width="@dimen/_140pxh">
+            <ImageView android:id="@+id/imageEllipse"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_140pxh"
+                android:layout_width="@dimen/_140pxh"
+                android:scaleType="centerCrop" circular="@{true}"
+                imageRes="@{@drawable/img_ellipse_140X140}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_ellipse_140X140"/>
+            <ImageView android:id="@+id/imageEdit"
+                android:layout_gravity="bottom|end"
+                android:layout_height="@dimen/_29pxh"
+                android:layout_width="@dimen/_29pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_edit_29X29"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_edit_29X29"/>
+        </FrameLayout>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_50_radius_16"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_full_name"
+            android:id="@+id/etStatusDefault" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_20pxv" android:singleLine="true"
+            android:text="@={profileVM.profileModel.etStatusDefaultValue}"
+            android:textColor="@color/gray_500"
+            android:textColorHint="@color/gray_500"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_50_radius_16"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_nickname"
+            android:id="@+id/etStatusDefaultOne"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_20pxv" android:singleLine="true"
+            android:text="@={profileVM.profileModel.etStatusDefaultOneValue}"
+            android:textColor="@color/gray_500"
+            android:textColorHint="@color/gray_500"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <LinearLayout android:id="@+id/linearStatusDefault"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_50cornerRadius">
+            <TextView android:ellipsize="end" android:id="@+id/txtLabel"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{profileVM.profileModel.txtLabel}"
+                style="@style/txtUrbanistregular14" tools:text="@string/lbl_date_of_birth"/>
+            <ImageView android:id="@+id/imageCalendar"
+                android:layout_height="@dimen/_16pxh"
+                android:layout_width="@dimen/_15pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_calendar_16X15"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_calendar_16X15"/>
+        </LinearLayout>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_50_radius_16"
+            android:drawableEnd="@drawable/img_checkmark_15X15"
+            android:drawablePadding="@dimen/_30pxh"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_email"
+            android:id="@+id/etStatusDefaultTwo"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_22pxh"
+            android:paddingStart="@dimen/_20pxh"
+            android:paddingTop="@dimen/_20pxv" android:singleLine="true"
+            android:text="@={profileVM.profileModel.etStatusDefaultTwoValue}"
+            android:textColor="@color/gray_500"
+            android:textColorHint="@color/gray_500"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearStatusDefault1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylegray_50cornerRadius">
+            <ImageView android:id="@+id/imageFolder"
+                android:layout_height="@dimen/_18pxh"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_folder"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_folder"/>
+            <ImageView android:id="@+id/imageArrowdown"
+                android:layout_height="@dimen/_4pxh"
+                android:layout_width="@dimen/_9pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_arrowdown_gray_500"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_arrowdown_gray_500"/>
+            <EditText
+                android:background="@drawable/rectangle_bg_gray_50"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:hint="@string/lbl_phone_number"
+                android:id="@+id/etFrameSeven" android:inputType="text"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_8pxv"
+                android:paddingEnd="@dimen/_30pxh"
+                android:paddingStart="@dimen/_6pxh"
+                android:paddingTop="@dimen/_7pxv"
+                android:singleLine="true"
+                android:text="@={profileVM.profileModel.etFrameSevenValue}"
+                android:textColor="@color/gray_500"
+                android:textColorHint="@color/gray_500"
+                android:textFontWeight="400"
+                android:textSize="@dimen/_14pxh"
+                android:textStyle="normal" tools:ignore="Autofill"/>
+        </LinearLayout>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutHor"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_border_gray_802_radius_29"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnSkip"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_184pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_skip"
+                android:textAllCaps="false"
+                android:textColor="@color/gray_802"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_skip"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:background="@drawable/rectangle_bg_gray_802_radius_29"
+                android:ellipsize="end"
+                android:fontFamily="@font/urbanist"
+                android:gravity="center" android:id="@+id/btnContinue"
+                android:layout_height="@dimen/_58pxv"
+                android:layout_width="@dimen/_184pxh"
+                android:letterSpacing="0.01"
+                android:paddingBottom="@dimen/_18pxv"
+                android:paddingEnd="@dimen/_16pxh"
+                android:paddingStart="@dimen/_16pxh"
+                android:paddingTop="@dimen/_18pxv"
+                android:singleLine="true"
+                android:text="@string/lbl_continue"
+                android:textAllCaps="false"
+                android:textColor="@color/white_A700"
+                android:textFontWeight="700"
+                android:textSize="@dimen/_16pxh"
+                android:textStyle="bold" tools:text="@string/lbl_continue"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

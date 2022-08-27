@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="topAlbumsGlobalVM" type="com.musica.app.modules.topalbumsglobal.data.viewmodel.TopAlbumsGlobalVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearTopAlbumsGlob"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageArrowleft"
+            android:layout_gravity="start"
+            android:layout_height="@dimen/_15pxh"
+            android:layout_width="@dimen/_19pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowleft"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+        <FrameLayout android:id="@+id/frameStackprice"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_184pxv" android:layout_width="@dimen/_380pxh">
+            <ImageView android:id="@+id/imageImage"
+                android:layout_gravity="start"
+                android:layout_height="@dimen/_184pxh"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_28pxh}"
+                imageRes="@{@drawable/img_image_57}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_57"/>
+            <TextView android:id="@+id/txtPrice"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@{topAlbumsGlobalVM.topAlbumsGlobalModel.txtPrice}"
+                style="@style/txtUrbanistromanbold24_2" tools:text="@string/msg_top_albums_glob"/>
+        </FrameLayout>
+        <TextView android:ellipsize="end"
+            android:id="@+id/txtLoremIpsumDol"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{topAlbumsGlobalVM.topAlbumsGlobalModel.txtLoremIpsumDol}"
+            style="@style/txtUrbanistromanbold24" tools:text="@string/msg_top_albums_glob2"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtArtistsName"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{topAlbumsGlobalVM.topAlbumsGlobalModel.txtArtistsName}"
+            style="@style/txtUrbanistromanmedium18_3" tools:text="@string/msg_the_most_played"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtPriceOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{topAlbumsGlobalVM.topAlbumsGlobalModel.txtPriceOne}"
+            style="@style/txtUrbanistsemibold14_2" tools:text="@string/msg_by_hearme_12"/>
+        <View android:background="@color/bluegray_100"
+            android:id="@+id/lineLine"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_380pxh"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:gravity="center_horizontal"
+            android:id="@+id/recyclerListzero"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            itemSpace="@{@dimen/_24pxh}" tools:itemCount="4" tools:listitem="@layout/row_listzero"/>
+    </LinearLayout>
+</layout>

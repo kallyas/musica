@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="exploreRowModel" type="com.musica.app.modules.explore.data.model.ExploreRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearRowcategories"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:id="@+id/linearTypeRoundedC1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal" style="@style/groupStylecornerRadius_8">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCategories"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{exploreRowModel.txtCategories}"
+                style="@style/txtUrbanistromanbold18_1" tools:text="@string/lbl_charts"/>
+            <ImageView android:id="@+id/imageImage"
+                android:layout_height="@dimen/_91pxh"
+                android:layout_width="@dimen/_81pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_20pxh}"
+                imageRes="@{@drawable/img_image_91X81}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_91X81"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearTypeRoundedC2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal" style="@style/groupStylecornerRadius_9">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPodcasts"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{exploreRowModel.txtPodcasts}"
+                style="@style/txtUrbanistromanbold18_1" tools:text="@string/lbl_podcasts"/>
+            <ImageView android:id="@+id/imageImageOne"
+                android:layout_height="@dimen/_91pxh"
+                android:layout_width="@dimen/_81pxh"
+                android:scaleType="fitXY"
+                cornerRadius="@{@dimen/_20pxh}"
+                imageRes="@{@drawable/img_image_73}"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_image_73"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

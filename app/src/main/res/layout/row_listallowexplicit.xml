@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listallowexplicitRowModel" type="com.musica.app.modules.playback.data.model.ListallowexplicitRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearAutoLayoutHor"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="horizontal">
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutVer"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="vertical">
+            <TextView android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:id="@+id/txtAllowExplicit"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{listallowexplicitRowModel.txtAllowExplicit}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/msg_allow_explicit"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtTurnonplayex"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{listallowexplicitRowModel.txtTurnonplayex}"
+                style="@style/txtUrbanistromanmedium14" tools:text="@string/msg_turn_on_play_ex"/>
+        </LinearLayout>
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchMaterialStateEnabledTwo"
+            android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+    </LinearLayout>
+</layout>

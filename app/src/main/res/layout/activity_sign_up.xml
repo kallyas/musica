@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="signUpVM" type="com.musica.app.modules.signup.data.viewmodel.SignUpVM"/>
+    </data>
+    <LinearLayout android:gravity="start" android:id="@+id/linearSignUp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <ImageView android:id="@+id/imageArrowleft"
+            android:layout_height="@dimen/_15pxh"
+            android:layout_width="@dimen/_19pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_arrowleft"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+        <ImageView android:id="@+id/imageVector"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_102pxh"
+            android:layout_width="@dimen/_102pxh"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_vector_red_A703"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_vector_red_A703"/>
+        <TextView android:ellipsize="end"
+            android:gravity="center_horizontal"
+            android:id="@+id/txtCreateYourAcc"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:singleLine="true"
+            android:text="@{signUpVM.signUpModel.txtCreateYourAcc}"
+            style="@style/txtUrbanistromanbold32" tools:text="@string/msg_create_your_acc"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_50_radius_16"
+            android:drawablePadding="@dimen/_13pxh"
+            android:drawableStart="@drawable/img_exclude_gray_500"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_email"
+            android:id="@+id/etStatusDefault" android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_23pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_21pxh"
+            android:paddingTop="@dimen/_22pxv" android:singleLine="true"
+            android:text="@={signUpVM.signUpModel.etStatusDefaultValue}"
+            android:textColor="@color/gray_500"
+            android:textColorHint="@color/gray_500"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <EditText
+            android:background="@drawable/rectangle_bg_gray_50_radius_16"
+            android:drawableEnd="@drawable/img_union_gray_500"
+            android:drawablePadding="@dimen/_30pxh"
+            android:drawableStart="@drawable/img_lock_16X14"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:hint="@string/lbl_password"
+            android:id="@+id/etStatusDefaultOne"
+            android:inputType="text"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_23pxv"
+            android:paddingEnd="@dimen/_21pxh"
+            android:paddingStart="@dimen/_22pxh"
+            android:paddingTop="@dimen/_22pxv" android:singleLine="true"
+            android:text="@={signUpVM.signUpModel.etStatusDefaultOneValue}"
+            android:textColor="@color/gray_500"
+            android:textColorHint="@color/gray_500"
+            android:textFontWeight="400"
+            android:textSize="@dimen/_14pxh" android:textStyle="normal" tools:ignore="Autofill"/>
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:buttonTint="@color/red_A700" android:ellipsize="end"
+            android:fontFamily="@font/urbanist"
+            android:id="@+id/checkBoxUnchecked"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_5pxv"
+            android:paddingStart="@dimen/_12pxh"
+            android:paddingTop="@dimen/_4pxv" android:singleLine="true"
+            android:text="@string/lbl_remember_me"
+            android:textColor="@color/gray_900"
+            android:textFontWeight="600"
+            android:textSize="@dimen/_14pxh" android:textStyle="bold" tools:text="@string/lbl_remember_me"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_gray_802_radius_29"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnSignUp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_58pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_18pxv"
+            android:paddingEnd="@dimen/_16pxh"
+            android:paddingStart="@dimen/_16pxh"
+            android:paddingTop="@dimen/_18pxv" android:singleLine="true"
+            android:text="@string/lbl_sign_up"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_sign_up"/>
+        <LinearLayout android:gravity="start"
+            android:id="@+id/linearAutoLayoutHor"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <View android:background="@color/bluegray_100"
+                android:id="@+id/lineLine"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_96pxh"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtOrcontinuewit"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{signUpVM.signUpModel.txtOrcontinuewit}"
+                style="@style/txtUrbanistsemibold18_5" tools:text="@string/msg_or_continue_wit"/>
+            <View android:background="@color/bluegray_100"
+                android:id="@+id/lineLineOne"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_96pxh"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/imageAutoLayoutHor"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_60pxh"
+            android:layout_width="@dimen/_303pxh"
+            android:scaleType="fitXY"
+            imageRes="@{@drawable/img_autolayouthor}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_autolayouthor"/>
+        <LinearLayout android:gravity="center_vertical"
+            android:id="@+id/linearAutoLayoutHor1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtConfirmation"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{signUpVM.signUpModel.txtConfirmation}"
+                style="@style/txtUrbanistregular14" tools:text="@string/msg_already_have_an"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtSignin"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{signUpVM.signUpModel.txtSignin}"
+                style="@style/txtUrbanistsemibold14_3" tools:text="@string/lbl_sign_in"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="explore1RowModel" type="com.musica.app.modules.explore.data.model.Explore1RowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearTypeRoundedC"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylecornerRadius_12">
+        <TextView android:ellipsize="end" android:id="@+id/txtPop"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.01" android:singleLine="true"
+            android:text="@{explore1RowModel.txtPop}"
+            style="@style/txtUrbanistromanbold18_1" tools:text="@string/lbl_pop"/>
+        <ImageView android:id="@+id/imageImageTwo"
+            android:layout_height="@dimen/_91pxh"
+            android:layout_width="@dimen/_81pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_20pxh}"
+            imageRes="@{@drawable/img_image_75}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_image_75"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="languageVM" type="com.musica.app.modules.language.data.viewmodel.LanguageVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearLanguage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearNavBar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_15pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtLanguage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{languageVM.languageModel.txtLanguage}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_language"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <TextView android:ellipsize="end" android:id="@+id/txtSuggested"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{languageVM.languageModel.txtSuggested}"
+            style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_suggested"/>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageOne"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtLanguageOne}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_english_us"/>
+            <LinearLayout android:gravity="center_horizontal"
+                android:id="@+id/linearStyleNoneThe"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="vertical" style="@style/groupStylecornerRadius_3">
+                <View
+                    android:background="@drawable/rectangle_bg_red_a700_radius_5_835"
+                    android:id="@+id/viewEllipse"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/_11pxh" android:layout_width="@dimen/_11pxh"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor1"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageTwo"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtLanguageTwo}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_english_uk"/>
+            <View
+                android:background="@drawable/rectangle_border_red_a700_radius_10"
+                android:id="@+id/viewEllipseOne"
+                android:layout_height="@dimen/_20pxh" android:layout_width="@dimen/_20pxh"/>
+        </LinearLayout>
+        <View android:background="@color/bluegray_100"
+            android:id="@+id/lineLine"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_380pxh"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtOthers"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:singleLine="true"
+            android:text="@{languageVM.languageModel.txtOthers}"
+            style="@style/txtUrbanistromanbold20" tools:text="@string/lbl_others"/>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor2"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtMandarin"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtMandarin}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_mandarin"/>
+            <View
+                android:background="@drawable/rectangle_border_red_a700_radius_10"
+                android:id="@+id/viewEllipseTwo"
+                android:layout_height="@dimen/_20pxh" android:layout_width="@dimen/_20pxh"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor3"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageThree"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtLanguageThree}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_hindi"/>
+            <View
+                android:background="@drawable/rectangle_border_red_a700_radius_10"
+                android:id="@+id/viewEllipseThree"
+                android:layout_height="@dimen/_20pxh" android:layout_width="@dimen/_20pxh"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor4"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageFour"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtLanguageFour}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_spanish"/>
+            <View
+                android:background="@drawable/rectangle_border_red_a700_radius_10"
+                android:id="@+id/viewEllipseFour"
+                android:layout_height="@dimen/_20pxh" android:layout_width="@dimen/_20pxh"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor5"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageFive"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtLanguageFive}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_french"/>
+            <View
+                android:background="@drawable/rectangle_border_red_a700_radius_10"
+                android:id="@+id/viewEllipseFive"
+                android:layout_height="@dimen/_20pxh" android:layout_width="@dimen/_20pxh"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor6"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageSix"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtLanguageSix}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_arabic"/>
+            <View
+                android:background="@drawable/rectangle_border_red_a700_radius_10"
+                android:id="@+id/viewEllipseSix"
+                android:layout_height="@dimen/_20pxh" android:layout_width="@dimen/_20pxh"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor7"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtBengali"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtBengali}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_bengali"/>
+            <View
+                android:background="@drawable/rectangle_border_red_a700_radius_10"
+                android:id="@+id/viewEllipseSeven"
+                android:layout_height="@dimen/_20pxh" android:layout_width="@dimen/_20pxh"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor8"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtLanguageSeven"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtLanguageSeven}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_russian"/>
+            <View
+                android:background="@drawable/rectangle_border_red_a700_radius_10"
+                android:id="@+id/viewEllipseEight"
+                android:layout_height="@dimen/_20pxh" android:layout_width="@dimen/_20pxh"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearAutoLayoutHor9"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" android:orientation="horizontal">
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtCountry"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{languageVM.languageModel.txtCountry}"
+                style="@style/txtUrbanistsemibold18" tools:text="@string/lbl_indonesia"/>
+            <View
+                android:background="@drawable/rectangle_border_red_a700_radius_10"
+                android:id="@+id/viewEllipseNine"
+                android:layout_height="@dimen/_20pxh" android:layout_width="@dimen/_20pxh"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

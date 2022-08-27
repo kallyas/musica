@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="summaryOneVM" type="com.musica.app.modules.summaryone.data.viewmodel.SummaryOneVM"/>
+    </data>
+    <LinearLayout android:gravity="start"
+        android:id="@+id/linearSummaryOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylewhite_A700">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarAppbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent" app:contentInsetStart="0dp">
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearRowarrowleft"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageArrowleft"
+                    android:layout_height="@dimen/_15pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_arrowleft"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_arrowleft"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtReviewSummary"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtReviewSummary}"
+                    style="@style/txtUrbanistromanbold24" tools:text="@string/lbl_review_summary"/>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout android:id="@+id/linearAutoLayoutVer"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical" style="@style/groupStylecornerRadius_5">
+            <ImageView android:id="@+id/imageVector"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_44pxh"
+                android:layout_width="@dimen/_50pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_vector"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_vector"/>
+            <LinearLayout android:gravity="center_vertical"
+                android:id="@+id/linearAutoLayoutHor"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPrice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtPrice}"
+                    style="@style/txtUrbanistromanbold32_2" tools:text="@string/lbl_9_99"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtMonth"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtMonth}"
+                    style="@style/txtUrbanistromanmedium18_2" tools:text="@string/lbl_month"/>
+            </LinearLayout>
+            <View android:background="@color/bluegray_100"
+                android:id="@+id/lineLine"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_332pxh"/>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutHor1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageCheckmark"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_checkmark_14X19"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_14X19"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtListeningwith"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtListeningwith}"
+                    style="@style/txtUrbanistromanmedium16_2" tools:text="@string/msg_listening_with"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutHor2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageCheckmarkOne"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_checkmark_14X19"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_14X19"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtListeningwitho"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtListeningwitho}"
+                    style="@style/txtUrbanistromanmedium16_2" tools:text="@string/msg_listening_witho"/>
+            </LinearLayout>
+            <LinearLayout android:gravity="start"
+                android:id="@+id/linearAutoLayoutHor3"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageCheckmarkTwo"
+                    android:layout_height="@dimen/_14pxh"
+                    android:layout_width="@dimen/_19pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_checkmark_14X19"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_checkmark_14X19"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtShuffleplay"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtShuffleplay}"
+                    style="@style/txtUrbanistromanmedium16_2" tools:text="@string/msg_shuffle_play"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal"
+            android:id="@+id/linearAutoLayoutVer1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical" style="@style/groupStylewhite_2">
+            <LinearLayout android:id="@+id/linearAutoLayoutHor4"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtAmount"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtAmount}"
+                    style="@style/txtUrbanistromanmedium14_1" tools:text="@string/lbl_amount"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPriceOne"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtPriceOne}"
+                    style="@style/txtUrbanistsemibold16" tools:text="@string/lbl_9_99"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/linearAutoLayoutHor5"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTax"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtTax}"
+                    style="@style/txtUrbanistromanmedium14_1" tools:text="@string/lbl_tax"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPriceTwo"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtPriceTwo}"
+                    style="@style/txtUrbanistsemibold16" tools:text="@string/lbl_1_99"/>
+            </LinearLayout>
+            <View android:background="@color/bluegray_100"
+                android:id="@+id/lineLineOne"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="@dimen/_1pxv" android:layout_width="@dimen/_332pxh"/>
+            <LinearLayout android:id="@+id/linearAutoLayoutHor6"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtTotal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtTotal}"
+                    style="@style/txtUrbanistromanmedium14_1" tools:text="@string/lbl_total"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtPriceThree"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:letterSpacing="0.01"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtPriceThree}"
+                    style="@style/txtUrbanistsemibold16" tools:text="@string/lbl_11_99"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/linearTypeCreditCar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal" style="@style/groupStylewhite_2">
+            <LinearLayout android:id="@+id/linearRowlightbulb"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" android:orientation="horizontal">
+                <ImageView android:id="@+id/imageLightbulb"
+                    android:layout_height="@dimen/_34pxh"
+                    android:layout_width="@dimen/_43pxh"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_lightbulb"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_lightbulb"/>
+                <TextView android:ellipsize="end"
+                    android:id="@+id/txtFortyFive"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:singleLine="true"
+                    android:text="@{summaryOneVM.summaryOneModel.txtFortyFive}"
+                    style="@style/txtUrbanistromanbold18" tools:text="@string/msg2"/>
+            </LinearLayout>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtChange"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:letterSpacing="0.01" android:singleLine="true"
+                android:text="@{summaryOneVM.summaryOneModel.txtChange}"
+                style="@style/txtUrbanistromanbold16" tools:text="@string/lbl_change"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@drawable/rectangle_bg_gray_800_radius_29"
+            android:ellipsize="end" android:fontFamily="@font/urbanist"
+            android:gravity="center" android:id="@+id/btnContinue"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_58pxv"
+            android:layout_width="@dimen/_380pxh"
+            android:letterSpacing="0.01"
+            android:paddingBottom="@dimen/_21pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_21pxv" android:singleLine="true"
+            android:text="@string/lbl_continue"
+            android:textAllCaps="false"
+            android:textColor="@color/white_A700"
+            android:textFontWeight="700"
+            android:textSize="@dimen/_16pxh" android:textStyle="bold" tools:text="@string/lbl_continue"/>
+    </LinearLayout>
+</layout>

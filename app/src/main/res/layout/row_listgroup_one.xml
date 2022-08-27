@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="listgroupOneRowModel" type="com.musica.app.modules.selectpaymentmethod.data.model.ListgroupOneRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearTypePayPalTh"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal" style="@style/groupStylewhite_2">
+        <LinearLayout android:id="@+id/linearRowgroupOne"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" android:orientation="horizontal">
+            <ImageView android:id="@+id/imageGroupOne"
+                android:layout_height="@dimen/_26pxh"
+                android:layout_width="@dimen/_22pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_group_26X22"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_group_26X22"/>
+            <TextView android:ellipsize="end"
+                android:id="@+id/txtPayPal"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:text="@{listgroupOneRowModel.txtPayPal}"
+                style="@style/txtUrbanistromanbold18" tools:text="@string/lbl_paypal"/>
+        </LinearLayout>
+        <View
+            android:background="@drawable/rectangle_border_red_a700_radius_12"
+            android:id="@+id/viewEllipse"
+            android:layout_height="@dimen/_24pxh" android:layout_width="@dimen/_24pxh"/>
+    </LinearLayout>
+</layout>
